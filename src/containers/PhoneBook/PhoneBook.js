@@ -37,6 +37,104 @@ class PhoneBook extends Component
                     email:'rachel@gmail.com',
                     dob:'17/12/1999'
                 },
+                {
+                    id: 5,
+                    name: "Chandler",
+                    phone: "444473",
+                    email:'Chandler@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 6,
+                    name: "Monica",
+                    phone: "5538373",
+                    email:'monica@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 7,
+                    name: "Heisenberg",
+                    phone: "658899",
+                    email:'Walt@gmail.com',
+                    dob:'16/12/1999'
+                },
+                {
+                    id: 8,
+                    name: "Jesse",
+                    phone: "32128",
+                    email:'pinkmen@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 9,
+                    name: "Hank",
+                    phone: "4438373",
+                    email:'shrader@gmail.com',
+                    dob:'18/12/1999'
+                },
+                {
+                    id: 10,
+                    name: "Harry",
+                    phone: "5558373",
+                    email:'potter@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 11,
+                    name: "Hermioni",
+                    phone: "4438373",
+                    email:'granger@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 12,
+                    name: "Ron",
+                    phone: "5558373",
+                    email:'weasley@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 13,
+                    name: "Severus",
+                    phone: "4438373",
+                    email:'snape@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 15,
+                    name: "Lilly",
+                    phone: "4438373",
+                    email:'potter@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 16,
+                    name: "Thomas",
+                    phone: "4438373",
+                    email:'shelby@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 17,
+                    name: "Grace",
+                    phone: "4438373",
+                    email:'shelby@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 18,
+                    name: "Polly",
+                    phone: "4438373",
+                    email:'polly@gmail.com',
+                    dob:'17/12/1999'
+                },
+                {
+                    id: 19,
+                    name: "Tokyo",
+                    phone: "4438373",
+                    email:'tokyo@gmail.com',
+                    dob:'17/12/1999'
+                }
             ],
            
         }
@@ -63,17 +161,30 @@ class PhoneBook extends Component
         subscribersList.push(newSubscriber);
         this.setState({ subscribersList: subscribersList });
     }
-    updateContactHandler(id, name, phone, email,dob) {
-        const newContactList = this.state.subscribersList;
-         localStorage.setItem('subscriberList', JSON.stringify(newContactList));
-        newContactList[id].name = name;
-        newContactList[id].phone = phone;
-        newContactList[id].email = email;
-        newContactList[id].dob = dob;
-        this.setState({
-          contacts: newContactList,
-        })
-      }
+   
+    nameChangedHandler = (event, id) => {
+        const personIndex = this.state.persons.findIndex(p => {
+          return p.id === id;
+        });
+    
+        const person = {
+          ...this.state.subscribersList[personIndex]
+        };
+    
+        // const person = Object.assign({}, this.state.persons[personIndex]);
+    
+        person.name = event.target.value;
+    
+        const persons = [...this.state.subscribersList];
+        persons[personIndex] = person;
+    
+        this.setState((prevState, props) => {
+          return {
+            persons: persons,
+            changeCounter: prevState.changeCounter + 1
+          };
+        });
+      };
      
     
    
@@ -82,7 +193,7 @@ class PhoneBook extends Component
                 <Router>
                     <div>
                     <Navbar/>
-                    <Route exact path="/" render={(props) => <ShowSubscriber {...props} subscribersList={this.state.subscribersList} updateContactHandler={this.updateContactHandler} deleteSubscriberHandler={this.deleteSubscriberHandler} />} />
+                    <Route exact path="/" render={(props) => <ShowSubscriber {...props} subscribersList={this.state.subscribersList} updateContactHandler={this.nameChangedHandler} deleteSubscriberHandler={this.deleteSubscriberHandler} />} />
                     <Route exact path="/add" render={({history}, props) => <AddSubscriber history={history} {...props} addSubscriberHandler={this.addSubscriberHandler} />} />
 
                     <Footer/>
