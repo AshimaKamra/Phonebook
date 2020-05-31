@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/AshimaKamra/Phonebook/static/css/main.d463fe9b.chunk.css",
+    "main.js": "/AshimaKamra/Phonebook/static/js/main.41116173.chunk.js",
+    "main.js.map": "/AshimaKamra/Phonebook/static/js/main.41116173.chunk.js.map",
+    "runtime-main.js": "/AshimaKamra/Phonebook/static/js/runtime-main.090fb9d7.js",
+    "runtime-main.js.map": "/AshimaKamra/Phonebook/static/js/runtime-main.090fb9d7.js.map",
+    "static/js/2.871bd5d7.chunk.js": "/AshimaKamra/Phonebook/static/js/2.871bd5d7.chunk.js",
+    "static/js/2.871bd5d7.chunk.js.map": "/AshimaKamra/Phonebook/static/js/2.871bd5d7.chunk.js.map",
+    "index.html": "/AshimaKamra/Phonebook/index.html",
+    "precache-manifest.7faa4012bf6dba3c7231662adea3fc09.js": "/AshimaKamra/Phonebook/precache-manifest.7faa4012bf6dba3c7231662adea3fc09.js",
+    "service-worker.js": "/AshimaKamra/Phonebook/service-worker.js",
+    "static/css/main.d463fe9b.chunk.css.map": "/AshimaKamra/Phonebook/static/css/main.d463fe9b.chunk.css.map",
+    "static/js/2.871bd5d7.chunk.js.LICENSE.txt": "/AshimaKamra/Phonebook/static/js/2.871bd5d7.chunk.js.LICENSE.txt",
+    "static/media/logo.jpg": "/AshimaKamra/Phonebook/static/media/logo.6a05de4c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.090fb9d7.js",
+    "static/js/2.871bd5d7.chunk.js",
+    "static/css/main.d463fe9b.chunk.css",
+    "static/js/main.41116173.chunk.js"
+  ]
+}
