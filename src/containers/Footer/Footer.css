@@ -1,0 +1,15 @@
+.footer
+{
+    text-align: center;
+}
+.icon
+{
+    width:35px;
+    height:35px;
+    
+}
+.icon-container
+{
+   
+    display: inline-block;
+}

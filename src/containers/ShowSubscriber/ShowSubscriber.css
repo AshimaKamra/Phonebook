@@ -1,0 +1,39 @@
+.subscriber-name
+{
+    float: left;
+}
+.subscriber-toggle
+{
+    float: right;
+}
+.subscriber-list
+{
+    color:white;
+    background-color: rgb(41, 39, 39);
+    font-size: 30px;
+    width:1110px;
+}
+.pagination-container
+{
+    text-align: center;
+}
+.pagination
+{
+   display: inline-block;
+
+}
+.add-subscriber
+{
+    float: right;
+
+}
+.add-subscriber .add-btn
+{
+    width:60px;
+    height:60px;
+    border-radius: 180px;
+    font-weight: bolder;
+    font-size: xx-large;
+    background-color: black;
+    margin:-70px 20px 0 -20px;
+}
